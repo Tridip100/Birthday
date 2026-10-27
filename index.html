@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f6b7c8" />
+    <title>A Little Universe Made for You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/masterpiece.css" />
+  </head>
+  <body data-theme="dusk">
+    <div class="sky-dust" aria-hidden="true"></div>
+    <div id="cursor-hearts" aria-hidden="true"></div>
+    <div id="transition" aria-live="polite"></div>
+    <div id="toast" role="status"></div>
+    <div class="bouquet-reveal" id="bouquet-reveal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="bouquet-reveal-title">
+      <div class="bouquet-reveal-inner">
+        <span class="bouquet-spark bouquet-spark-one" aria-hidden="true">✦</span><span class="bouquet-spark bouquet-spark-two" aria-hidden="true">♡</span><span class="bouquet-spark bouquet-spark-three" aria-hidden="true">✦</span>
+        <p class="eyebrow">A little garden, gathered for you</p>
+        <h2 id="bouquet-reveal-title">Every bloom found its way back to you.</h2>
+        <div class="bouquet-hero-wrap"><img class="bouquet-hero" src="assets/images/tulip-bouquet.png" alt="A large bouquet of soft pink tulips" /><span class="bouquet-ribbon">for you</span></div>
+        <p class="bouquet-reveal-copy" id="bouquet-reveal-copy"></p>
+        <button class="button" id="close-bouquet" type="button">Hold this bouquet close ♡</button>
+      </div>
+    </div>
+
+    <header class="hud">
+      <span id="progress">00 / 11 · Our Little Journey</span>
+      <button class="music-button" id="music-button" type="button" aria-label="Play music">♪</button>
+    </header>
+    <button class="easter-egg" id="easter-egg" type="button" aria-label="A tiny secret">♥</button>
+    <audio id="song" src="assets/images/memories/2021/Jo-Tum-Mere-Ho-slowed%26reverb-axonnaru%20(2).mp3" loop preload="metadata"></audio>
+
+    <main>
+      <section class="chapter active" id="chapter-0">
+        <div class="scene-objects hero-objects" aria-hidden="true"><i>✦</i><i>♥</i><i>✦</i><i>♡</i><i>✦</i></div>
+        <div class="opening-memories" aria-label="Our first little memories"><figure class="opening-memory"><img src="assets/images/memories/2019/WhatsApp%20Image%202026-10-27%20at%2010.05.33%20PM.jpeg" alt="A treasured first memory" /></figure><figure class="opening-memory"><img src="assets/images/memories/2019/WhatsApp%20Image%202026-10-27%20at%2010.05.34%20PM.jpeg" alt="A treasured first memory" /></figure><figure class="opening-memory"><img src="assets/images/memories/2019/WhatsApp%20Image%202026-10-27%20at%2010.05.34%20PM%202.jpeg" alt="A treasured first memory" /></figure></div>
+        <p class="eyebrow script">Hey, birthday girl. 💌</p>
+        <h1>I made a little something for you.</h1>
+        <p class="lead">But there's one rule… you can't open all the surprises at once.<br />Ready to discover what I've hidden for you?</p>
+        <button class="button" data-go="1">Open my little universe <span>✨</span></button>
+      </section>
+
+      <section class="chapter" id="chapter-1">
+        <p class="eyebrow">Chapter 01 · The Entry</p><h2>The Secret Birthday Letter 💌</h2>
+        <p class="lead">Tap the seal.</p><button class="envelope" id="envelope" type="button" aria-label="Open the envelope">💌</button>
+        <p class="typed-letter" id="envelope-text"></p><button class="button next" data-go="2">Next chapter ✨</button>
+      </section>
+
+      <section class="chapter" id="chapter-2">
+        <p class="eyebrow">Chapter 02 · Your Memories</p><h2>Our Little Museum 📸</h2>
+        <p class="lead">Flip every Polaroid to uncover a little memory.</p><div class="polaroids" id="polaroids"></div>
+        <button class="button next" data-go="3">Next chapter ✨</button>
+      </section>
+
+      <section class="chapter" id="chapter-3">
+        <p class="eyebrow">Chapter 03 · The Love Quiz</p><h2>How Well Do You Know Us? 💘</h2>
+        <div class="glass-card quiz-card" id="quiz"></div><button class="button next" data-go="4">Next chapter ✨</button>
+      </section>
+
+      <section class="chapter garden-chapter" id="chapter-4">
+        <div class="scene-objects garden-objects" aria-hidden="true"><i>✦</i><i>❋</i><i>✦</i><i>❋</i></div>
+        <p class="eyebrow">Chapter 04 · The Flower Garden</p><h2>Flowers That Never Fade 🌷</h2>
+        <p class="lead">Tap the soil. Every flower is a reason.</p><div class="garden" id="garden"></div>
+        <p class="handwritten" id="flower-reason"></p><p class="bouquet" id="bouquet"></p><button class="button next" data-go="5">Next chapter ✨</button>
+      </section>
+
+      <section class="chapter" id="chapter-5">
+        <div class="scene-objects gift-objects" aria-hidden="true"><i>✦</i><i>✦</i><i>♥</i></div>
+        <div class="gift-floaters" aria-hidden="true"><span>💌</span><span>♡</span><span>✦</span><span>💗</span><span>✧</span></div>
+        <p class="eyebrow">Chapter 05 · The Surprise</p><h2>Choose Your Mystery Gift 🎁</h2>
+        <p class="lead">Pick one. You can't see what's inside.</p><div class="gifts" id="gifts"></div><div class="glass-card gift-message" id="gift-message"></div>
+        <button class="button next" data-go="6">Next chapter ✨</button>
+      </section>
+
+      <section class="chapter midnight" id="chapter-6">
+        <div class="moon-orbit" aria-hidden="true"><span>☾</span><i>✦</i><i>✦</i></div>
+        <div class="shooting-stars" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="eyebrow">Chapter 06 · The Future</p><h2>Our Little Bucket List 🌙</h2>
+        <p class="lead">Light up every star.</p><div class="constellation" id="constellation"></div><p class="handwritten" id="wish"></p>
+        <button class="button next" data-go="7">Next chapter ✨</button>
+      </section>
+
+      <section class="chapter midnight" id="chapter-7">
+        <div class="letter-glow" aria-hidden="true">♡</div>
+        <div class="letter-floaters" aria-hidden="true"><span>💌</span><span>♫</span><span>♡</span><span>✉</span><span>♪</span><span>♥</span></div>
+        <p class="eyebrow">Chapter 07 · The Heart</p><h2>The Letter I Couldn't Say Out Loud 🥹</h2>
+        <button class="button" id="read-letter" type="button">Read it slowly</button><div class="long-letter" id="long-letter"></div>
+        <button class="button next" data-go="8">There's one last thing…</button>
+      </section>
+
+      <section class="chapter finale" id="chapter-8">
+        <div class="scene-objects finale-objects" aria-hidden="true"><i>✦</i><i>♥</i><i>✦</i><i>♥</i></div>
+        <div class="finale-floaters" aria-hidden="true"><span>✦</span><span>♥</span><span>✦</span><span>♡</span><span>✦</span></div>
+        <p class="eyebrow">Chapter 08 · Make a Wish</p><h2>One Last Wish, Birthday Girl 🎂</h2>
+        <div class="cake-memory"><div class="cake-photo-stack" aria-label="Birthday memories"><figure><img src="assets/images/memories/2020/IMG-20251011-WA0010.jpg" alt="A cherished birthday memory" /></figure><figure><img src="assets/images/memories/2020/IMG-20260211-WA0025.jpg" alt="A cherished birthday memory" /></figure><figure><img src="assets/images/memories/2020/IMG-20260305-WA0164%20(2).jpg" alt="A cherished birthday memory" /></figure></div><div class="wish-breeze" aria-hidden="true"><i></i><i></i><i></i></div><div class="cake" id="cake" aria-label="Birthday cake"><div class="candles"><i></i><i></i><i></i></div><div class="cake-top"></div><div class="cake-base"></div></div></div>
+        <button class="button" id="blow-candles" type="button">Make a wish &amp; blow out the candles</button><p class="final-message" id="final-message"></p>
+        <button class="button next" data-go="9" type="button">There is one last little thing… ♡</button>
+      </section>
+
+      <section class="chapter" id="chapter-9" data-theme="letter" data-transition="Four tiny notes are waiting…">
+        <div class="pocket-floaters" aria-hidden="true"><span>✉</span><span>♡</span><span>✦</span><span>✿</span><span>♥</span></div>
+        <p class="eyebrow">Chapter 09 · The Afterglow</p><h2>A Pocketful of Little Things ✉</h2>
+        <p class="lead">Open them in any order. I saved every one for you.</p>
+        <div class="pocket-grid" id="pocket-notes"></div><div class="pocket-message" id="pocket-message" aria-live="polite"></div>
+        <button class="button next" data-go="10" type="button">Keep these close ♡</button>
+      </section>
+
+      <section class="chapter" id="chapter-10" data-theme="finale" data-transition="For all our tomorrows…">
+        <div class="forever-floaters" aria-hidden="true"><span>✦</span><span>♡</span><span>✧</span><span>♥</span><span>✦</span></div>
+        <p class="eyebrow">Chapter 10 · The Forever Note</p><h2>One Promise, Locked for Us 🔐</h2>
+        <p class="lead" id="forever-prompt">Enter the little word that belongs to us.</p>
+        <div class="love-lock" id="love-lock">
+          <div class="locket" aria-hidden="true"><span class="locket-heart">♥</span><i></i></div>
+          <label class="sr-only" for="forever-code">Your secret word</label><input id="forever-code" type="text" maxlength="24" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="our little word" />
+          <button class="button" id="unlock-forever" type="button">Turn the tiny key</button><p class="lock-feedback" id="lock-feedback"></p>
+        </div>
+        <div class="forever-note" id="forever-note" aria-live="polite"></div>
+        <button class="button next" id="open-endless-gallery" data-go="11" type="button">Keep scrolling — there is more of you ♡</button>
+        <button class="button secondary" id="replay" type="button" hidden>Replay our little universe</button>
+      </section>
+
+      <section class="chapter endless-chapter" id="chapter-11" data-theme="endless" data-transition="A little forever is still unfolding…">
+        <div class="endless-ambient" id="endless-ambient" aria-hidden="true"><i class="ambient-layer is-visible"></i><i class="ambient-layer"></i></div>
+        <div class="endless-intro">
+          <div class="endless-intro-sparks" aria-hidden="true"><span>♡</span><span>✦</span><span>♥</span><span>✧</span></div>
+          <p class="eyebrow">Chapter 11 · The Little Forever</p><h2>There Is Still So Much of You to Love</h2>
+          <p class="lead" id="endless-intro-copy">Keep scrolling. There is no last page when it comes to all the reasons I love you.</p>
+          <p class="scroll-cue" aria-hidden="true"><span>↓</span> keep going slowly</p>
+          <button class="button secondary endless-replay" id="endless-replay" type="button">Begin our little universe again</button>
+        </div>
+        <div class="endless-reel" id="endless-reel"></div>
+      </section>
+    </main>
+    <button class="chapter-restart" id="chapter-restart" type="button" aria-label="Restart our little universe" hidden>↺ <span>Restart</span></button>
+    <script src="assets/js/content.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
